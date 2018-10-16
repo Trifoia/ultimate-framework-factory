@@ -1,3 +1,4 @@
+##### DEFAULT NODE #####
 # Logs
 logs
 *.log
@@ -60,8 +61,9 @@ typings/
 # next.js build output
 .next
 
-# VS code workspaces are file system dependent
-*.code-workspace
-
-# Dedicating testing folder
-testing/
+##### CUSTOM #####
+# Built files
+build/*
+!build/.gitkeep
+.pre_build/*
+!.pre_build/.gitkeep

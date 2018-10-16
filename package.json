@@ -1,0 +1,41 @@
+{
+  "name": "framework-factory",
+  "version": "0.1.0",
+  "description": "An endlessly configurable framework for... frameworks!",
+  "main": "./bin/uff.js",
+  "bin": {
+    "uff": "./bin/uff.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "framework",
+    "static",
+    "simple",
+    "ejs",
+    "scss",
+    "js",
+    "configure",
+    "no dependencies"
+  ],
+  "author": "Trifoia <webapps@trifoia.com>",
+  "contributors": [
+    "Joshua Evans <thejoshuaevans@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/irisEd/framework-factory#readme",
+  "bugs": {
+    "url": "https://github.com/irisEd/framework-factory/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irisEd/framework-factory.git"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-config-google": "^0.10.0"
+  },
+  "dependencies": {}
+}
