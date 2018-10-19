@@ -34,8 +34,8 @@
     "url": "git+https://github.com/irisEd/framework-factory.git"
   },
   "devDependencies": {
-    "eslint": "^5.7.0",
-    "eslint-config-google": "^0.10.0"
+    "eslint": "5.7.0",
+    "eslint-config-google": "0.10.0"
   },
   "dependencies": {}
 }
