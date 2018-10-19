@@ -33,12 +33,24 @@ const EJS_EXTENSION_REGEX = /.ejs$/;
   console.log('Getting filenames...\n');
   let ejsFilenames = fs.readdirSync(inDir).filter((file) => EJS_EXTENSION_REGEX.test(file));
 
-  // Get the styling
-  let style = fs.readFileSync('./.pre_build/style.css');
-
   // Render all the files found
   console.log('Rendering EJS..\n');
   let renderPromises = ejsFilenames.map((filename) => {
+    // Get the styling
+    let style;
+    try {
+      style = fs.readFileSync(`./.pre_build/${filename.match(/(.+)\.ejs/)[1]}.css`);
+    } catch (e) {
+      // If no styling was found using the ejs filename, get the generic 'style' sheet
+      console.log(`INFO: Could not find matching CSS file for ${filename}, using generic style...`);
+      try {
+        style = fs.readFileSync('./.pre_build/style.css');
+      } catch (e) {
+        // There is no style information
+        console.log(`INFO: Could not find generic stylesheet. ${filename} will be rendered with no styling`);
+        style = '';
+      }
+    }
     return ejs.renderFile(path.join(inDir, filename), {style: style}, ejsOptions);
   });
   let rendered = await Promise.all(renderPromises);
