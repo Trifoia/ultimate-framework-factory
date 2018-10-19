@@ -1,0 +1,3 @@
+[submodule "src/templates/ultimate-framework-factory"]
+	path = src/templates/ultimate-framework-factory
+	url = https://github.com/Trifoia/ultimate-framework-factory.git
