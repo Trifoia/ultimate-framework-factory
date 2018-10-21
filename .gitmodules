@@ -1,3 +1,6 @@
 [submodule "src/templates/trifoia-static-web"]
 	path = src/templates/trifoia-static-web
 	url = https://github.com/Trifoia/trifoia-static-web
+[submodule "lib/utils/text-extensions"]
+	path = lib/utils/text-extensions
+	url = https://github.com/trifoia/text-extensions

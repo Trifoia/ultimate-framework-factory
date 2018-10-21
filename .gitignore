@@ -1,3 +1,4 @@
+##### DEFAULT NODE #####
 # Logs
 logs
 *.log
@@ -63,5 +64,8 @@ typings/
 # VS code workspaces are file system dependent
 *.code-workspace
 
-# Dedicating testing folder
-testing/
+# Built files
+build/*
+!build/.gitkeep
+.pre_build/*
+!.pre_build/.gitkeep
