@@ -68,3 +68,6 @@ build/*
 !build/.gitkeep
 .pre_build/*
 !.pre_build/.gitkeep
+
+# Local files and scripts
+local/

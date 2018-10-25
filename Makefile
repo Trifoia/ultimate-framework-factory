@@ -10,12 +10,11 @@ lint:
 
 # Deletes the contents of the "build" folder
 clean:
-	rm -rf ./build/*
+	rm -rf ./build/* ./build/.[!.]* ./build/..?*
 
-# Deletes the contents of the "build" folder except for node modules. Note that
-# if the "build" directory is empty
+# Deletes the contents of the "build" folder except for node modules
 clean-quick:
-	find build -type f | grep -v "gitkeep" | xargs rm -f
+	find build -type f | grep -v "node_modules" | xargs rm -f
 
 # Run a build and put it in the build directory (used for development purposes)
 build:
@@ -26,3 +25,6 @@ test: install lint clean build
 
 # Runs a test build without destroying node modules (for faster testing)
 test-quick: install lint clean-quick build
+
+# Runs a quick test build without installing modules (for super fast testing)
+test-quick-noinstall: lint clean-quick build
